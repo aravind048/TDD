@@ -2,7 +2,8 @@ function add(numbers) {
     if (numbers === "") {
         return 0;
     }
-    const numsArray = numbers.split(",");
+
+    const numsArray = numbers.split(/[\n,]/);
     return numsArray.reduce((sum, num) => sum + parseInt(num, 10), 0);
 }
 
